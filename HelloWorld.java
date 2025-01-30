@@ -9,3 +9,21 @@ public class HelloWorld {
        
  }   // end of class HelloWorld
  
+
+ /*
+  
+  optional-package-declaration
+optional-imports
+
+public class program-name {
+
+    optional-variable-declarations-and-subroutines
+    
+    public static void main(String[] args) {
+       statements
+    }
+    
+    optional-variable-declarations-and-subroutines
+
+}
+  */
