@@ -97,7 +97,7 @@ public class LinkedList {
     * @param key  The key to find in the LinkedList
     * @return Node Returns the Node with the given key or null if non-existent.
     */
-    private Node find(String key) {
+    public Node find(String key) {
         Node curr = head;
 
         while (curr != null) {
@@ -133,21 +133,19 @@ public class LinkedList {
 
     }
 
-    static boolean ordered(LinkedList sList){
+    public static boolean ordered(LinkedList sList) {
         if (sList.head == null || sList.head.next == null) {
-            return true; // Empty list or single element is considered ordered
+            return true; // Empty or single-node list is always ordered
         }
-
+    
         Node curr = sList.head;
-
-        while (curr != null){
-            if(curr.key.compareTo(curr.next.key) > 0){
+        while (curr.next != null) { // ✅ Fixed condition
+            if (curr.key.compareTo(curr.next.key) > 0) {
                 return false;
             }
             curr = curr.next;
         }
         return true;
-
     }
 
     static LinkedList reversed(LinkedList sList){
@@ -167,6 +165,9 @@ public class LinkedList {
     static LinkedList compressList(LinkedList sList){
         LinkedList compressedList = new LinkedList();
         Node current = sList.head;
+        if (sList.head == null || sList.head.next == null) {
+            return sList; // Empty list or single element is considered ordered
+        }
 
         while (current != null) {
             Node existingNode = compressedList.find(current.key);
@@ -175,7 +176,7 @@ public class LinkedList {
                 existingNode.value += current.value;
             } else {
                 // Otherwise, add a new node with the key and value
-                compressedList.add(current.key, current.value);
+                compressedList.addTail(current.key, current.value);
             }
             current = current.next;
         }
