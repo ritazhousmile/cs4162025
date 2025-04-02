@@ -4,7 +4,7 @@
 
 import java.util.Scanner;
 import java.util.Stack;
- 
+
 public class Postfix {
     public static char checkValidOperator(String input) {
         switch (input) {
