@@ -1,7 +1,7 @@
 
-import 
+
 public class W2 {
-    
+    /* 
     public static boolean matchingBrackets(String s){
         int open = 0;
         int closed = 0;
@@ -15,19 +15,17 @@ public class W2 {
         }      
         return open == closed;
     }
+*/
 
+    public static void main(String[] args){
+        int x = 6;
+        int y = x ++;
+        int z = ++x;
 
-    public static void calculator(){
-        Scanner in = new Scanner(System.in);
-        double in1, in2;
-        String op;
-        System.out.println("Enter input1: ");
-        in1 = in.nextDouble();
-        System.out.println("Enter input 2: ");
-        in2 = in.nextDouble();
-        System.out.println("Enter Operator； ");
-        op = in.next();
-        if(op is)
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(z);
 
     }
+    
 }
